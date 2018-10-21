@@ -1,5 +1,5 @@
 ---
-# file: roles/podcasts/tasks/main.yml
+# file: roles/gkpodcasts/tasks/main.yml
 
 - name: "setup | create containing folder"
   file:
@@ -17,7 +17,7 @@
     group: root
     mode: 0755
 
-- include_tasks: podcasts.yml
+- include_tasks: gkpodcasts.yml
   with_items: "{{ podcasts }}"
   vars:
     - podcast: "{{ item }}"

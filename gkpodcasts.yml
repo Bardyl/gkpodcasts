@@ -1,10 +1,10 @@
 ---
-# file: podcasts.yml
+# file: gkpodcasts.yml
 
 - hosts: all
   become: true
   roles:
-   - podcasts
+   - gkpodcasts
 
 ...
 # vim:ft=ansible:

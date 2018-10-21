@@ -1,4 +1,4 @@
-# file: roles/podcasts/tasks/podcasts.yml
+# file: roles/gkpodcasts/tasks/gkpodcasts.yml
 ---
 
 - name: "{{ podcast.title }} | copy logo files"

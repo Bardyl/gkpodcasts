@@ -1,5 +1,5 @@
 ---
-# file: roles/podcasts/defaults/main.yml
+# file: roles/gkpodcasts/defaults/main.yml
 
 podcasts: []
 localpath: "/var/www/html"
