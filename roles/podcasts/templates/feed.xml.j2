@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<channel>
+  <title>{{ podcast.title }}</title>
+  <itunes:author>{{ podcast.author }}</itunes:author>
+  <itunes:category text="Music"></itunes:category>
+  <link>{{ podcast.website }}</link>
+  <itunes:summary>{{ podcast.summary }}</itunes:summary>
+  <language>fr-fr</language>
+  <lastBuildDate>Sat, 01 Apr 2018 09:00:00 +0200</lastBuildDate>
+  <copyright>{{ podcast.copyright }}</copyright>
+  <image>
+        <url>{{ localurl }}/{{ podcast.cover }}</url>
+        <title>{{ podcast.title }}</title>
+        <link>{{ podcast.website }}</link>
+  </image>
+        <itunes:image href="{{ localurl }}/{{ podcast.cover }}" />
+        <itunes:explicit>no</itunes:explicit>
+{% for episode in podcast.episodes %}
+        <item>
+                <title><![CDATA[{{ episode.title }}]]></title>
+                <link>{{ episode.link }}</link>
+                <itunes:author>{{ podcast.author }}</itunes:author>
+                <enclosure url="{{ episode.url }}" type="audio/mpeg" />
+                <guid>{{ episode.link }}</guid>
+                <pubDate>{{ episode.date }}</pubDate>
+                <itunes:duration>{{ episode.duration }}</itunes:duration>
+                <itunes:image href="{{ localurl }}/{{ podcast.cover }}" />
+                <itunes:subtitle><![CDATA[{{ episode.summary }}]]></itunes:subtitle>
+                <itunes:summary><![CDATA[{{ episode.summary  }}]]></itunes:summary>
+        </item>
+{% endfor %}
+</channel>
+</rss>

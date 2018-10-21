@@ -1,0 +1,24 @@
+# file: roles/podcasts/tasks/podcasts.yml
+---
+
+- name: "{{ podcast.title }} | copy logo files"
+  copy:
+    src: "{{ podcast.cover }}"
+    dest: "{{ localpath }}/{{ podcast.cover }}"
+    owner: root
+    group: www-data
+    mode: 0755
+
+- name: "{{ podcast.title }} | create RSS feed"
+  template:
+    src: feed.xml.j2
+    dest: "{{ localpath }}/{{ podcast.feed }}"
+    owner: root
+    group: www-data
+    mode: 0755
+
+- debug:
+    msg: "You can now subscribe to {{ localurl }}/{{ podcast.feed }}"
+
+...
+# vim:ft=ansible:

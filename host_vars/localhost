@@ -1,0 +1,51 @@
+---
+# file: group_vars/localhost
+
+# les caractères spéciaux (comme &) doivent être convertis dans les URLs Soundcloud => &amp;
+
+localpath: "/var/www/html"
+localurl: "http://localhost"
+
+podcasts:
+### Retro Dash
+- title: "Retro Dash"
+  author: "Gamekult"
+  website: "https://www.gamekult.com"
+  summary: "Bienvenue dans Rétro Dash, la nouvelle émission de Gamekult dédiée, comme son nom l'indique astucieusement, aux jeux vidéo d'antan."
+  copyright: "Gamekult © 2018. Tous droits réservés."
+  cover: retro-dash.png
+  feed: retro-dash.xml
+  episodes:
+# Retro Dash Episode 1
+  - title: "Episode 1 : Bitmap Brothers, les princes d'Angleterre"
+    link: "https://www.gamekult.com/emission/gamekult-lance-retro-dash-sa-nouvelle-emission-retrogaming-3050809667.html"
+    date: "Sat, 22 Sep 2018 09:00:00 +0200"
+    duration: "01:17:47"
+    summary: "Pour ce premier effeuillage, nous vous avons concocté un Point News Rétro (où l'on pourra parler de remasters, d'anniversaires, de retours de licences sur Kickstarter ou de trois dingos dans leur garage qui développent un jeu pour Megadrive), une ludographie des Bitmap Brothers (studio responsable de quelques jeux de légende comme Speedball 2, Xenon 2 ou encore Gods) ainsi qu'un petit quizz de fin d'émission où Puyo et Meeea tenteront de découvrir quel jeu se cache derrière des extraits de magazines d'époque."
+    url: "https://api.soundcloud.com/tracks/..." # URL vers Episode 1 de Retro Dash
+# Retro Dash Episode 2
+  - title: "Episode 2 : On fête les 30 ans de la Megadrive"
+    link: "https://www.gamekult.com/emission/sonnez-hautbois-resonnez-musettes-c-est-le-deuxieme-episode-de-retro-dash-3050810447.html"
+    date: "Wed, 17 Oct 2018 12:02:00 +0200"
+    duration: "01:41:46"
+    summary: "Après avoir décortiqué la ludographie des Bitmap Brothers, notre équipe de choc (composée de Pipomantis, Puyo et Meeea - également chez nous sur 24 FPS) revient sur ses jeux préférés de la Mega Drive. Sans aucune volonté d'être exhaustive ou de vous faire un top des meilleurs titres de la console, l'équipe évoque plutôt ses souvenirs, personnels et intimes. Alors oui, peut-être que votre jeu préféré n'y est pas ou que cette licence cultissime que vous aimez tant s'est fait la malle mais promis, on a encore clairement de quoi faire pour un deuxième volet à l'avenir."
+    url: "https://api.soundcloud.com/tracks/..." # URL vers Episode 2 de Retro Dash
+### Gaijin Dash
+- title: "Gaijin Dash"
+  author: "Gamekult"
+  website: "https://www.gamekult.com"
+  summary: "Gaijin Dash, c'est le podcast de Gamekult consacré exclusivement à l'actualité du jeu vidéo japonais."
+  copyright: "Gamekult © 2018. Tous droits réservés."
+  cover: gaijin-dash.png
+  feed: gaijin-dash.xml
+  episodes:
+# Gaijin Dash Episode Epilogus TGS 2018
+  - title: "Trois Gaijin (re)font le show : c'est l'heure de l'Epilogus du Tokyo Game Show 2018"
+    link: "https://www.gamekult.com/emission/trois-gaijin-re-font-le-show-c-est-l-heure-de-l-epilogus-du-tokyo-game-show-2018-3050809883.html"
+    date: "Wed, 26 Sep 2018 16:54:00 +0200"
+    duration: "00:55:37"
+    summary: "Comme à la parade, Puyo Greg et Kamui revivent leurs meilleurs moments du salon à froid à tiède, laissant le coeur évoquer petits moments de plaisir, et le cortex analyser cette édition sans folie, mais qui méritait tout de même le voyage. Inutile de s'épancher davantage, vous connaissez la formule et la marche à suivre : on clique sur le bouton lecture, on se sert un thé vert et on profite des commentaires ciselés de l'équipe. Excellent visionnage et remerciements particuliers aux abonnés qui ont financé le programme !"
+    url: "https://api.soundcloud.com/tracks/..." # URL vers Episode 1 de Gaijin Dash
+
+...
+# vim:ft=ansible:

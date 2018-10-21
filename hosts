@@ -1,0 +1,6 @@
+# file: inventory
+
+[all]
+localhost
+
+# vim:ft=ansible:

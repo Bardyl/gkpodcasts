@@ -1,0 +1,26 @@
+---
+# file: roles/podcasts/tasks/main.yml
+
+- name: "setup | create containing folder"
+  file:
+    path: "{{ localpath }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: "setup | create robots.txt"
+  copy:
+    src: robots.txt
+    dest: "{{ localpath }}/robots.txt"
+    owner: root
+    group: root
+    mode: 0755
+
+- include_tasks: podcasts.yml
+  with_items: "{{ podcasts }}"
+  vars:
+    - podcast: "{{ item }}"
+
+...
+# vim:ft=ansible:
