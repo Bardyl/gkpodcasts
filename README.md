@@ -1,6 +1,6 @@
 # gkpodcasts
 
-Un simple rôle Ansible permettant de créer des flux RSS pour les podcasts de Gamekult (entre autres, fonctionne avec n'importe quoi d'autre qui proposerait des podcasts avec l'idée saugrenue de ne pas les associer à un flux RSS)
+Un simple rôle Ansible permettant de créer des flux RSS pour les podcasts de Gamekult (entre autres, fonctionne avec n'importe qui d'autre qui proposerait des podcasts avec l'idée saugrenue de ne pas les associer à un flux RSS)
 
 Nécessite d'avoir sous la main un serveur HTTP et une connaissance même restreinte d'Ansible. Si vous n'y connaissez rien à Ansible, bon courage parce que je me vois mal expliquer comment tout ça fonctionne dans ce README. 
 
